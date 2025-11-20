@@ -1,64 +1,38 @@
-Expenses
+### **Expense Tracker Project**
 
+**Project Title**
 
-Expenses is a tiny expense tracker written in Python. You use it thus:
+Simple Expense Tracker
 
-```
-    expenses add 3.10 "Cappuccino at Dark Horse"
-    expenses summary
-    expenses plot
-```
+**Features (Functional Requirements)**
 
-Features
---------
+- Add new expenses with date, category, amount, and description.
+- View all recorded expenses.
+- View expenses by category.
+- Display summary statistics (total spent, average expense).
+- Save all data persistently in a CSV file.
 
-- Stores expenses in a very simple CSV file
-- Keeps a full version history of expenses in case of user error
-- Supports basic reports and plotting of expenses
+**Non-Functional Requirements**
 
-Why Expenses
-------------
+- Usable Command-Line Interface (CLI).
+- Reliable input validation.
+- Data integrity with simple CSV file storage.
+- Modular, readable Python code with comments.
+- Error handling for file operations and inputs.
 
-If you're like me, you want to keep track of your expenses in a very light-weight fashion. You'll
-never track them if you need to wait for a spreadsheet program to open and then nagivate to a particular
-cell. Also you have a shortcut for opening the terminal on your computer so a simple command-line interface
-is exactly what you need for your expenses.
+**Modules**
 
-How do I use Expenses?
-----------------
+- main.py — core driver program, menu interface
+- expense_manager.py — functions to add, view, summarize expenses and file I/O
+- utils.py — helper functions for input validation and formatting
 
-Expenses itself is contained in a single executable. Put that in your PATH somewhere.
-It does have the following dependencies:
+**File Storage**
 
-- Python 2.7+
-- Mercurial (This is used to keep your expenses versioned in case you screw them up)
-- Matplotlib (If you want to use the plot feature)
+- expenses.csv — stores expense records (Date, Category, Amount, Description)
 
-When you type "expenses" on the command-line for the first time, a new Expenses setup
-is created at `~/.expenses/`. This includes a mercurial repository at `~/.expenses/repo`
-which contains your actual expenses file `~/.expenses/repo/expenses.csv`.
+**Diagrams and Documentation**
 
-You probably won't need to work with that file directly, you can use the `expenses list`
-command to view it, and the `expenses edit` command to edit it. By using those commands
-you ensure that it stays properly versioned.
-
-Does Expenses work on Windows?
-------------------------
-
-Maybe.
-
-Using [Cygwin](http://www.cygwin.com/) it should probably work. I'm not really
-sure, as I don't have a Windows machine to try it on. The only real obstacle to
-Windows at the moment is the location to use for the Expenses data folder: on
-UNIX systems I use $HOME/.expenses. If anyone wants to make it pick a
-reasonable spot on Windows I will happily accept your patch.
-
-Is Expenses exactly the same as PEM?
------------------------------
-
-They're very similar.
-
-PEM is the [GNU Personal Expense Manager](http://www.gnu.org/software/pem/). It also takes
-the minimalist approach and uses a CSV datastore. I wrote this before I knew
-that PEM existed, however Expenses has some upsides: its versioning and plotting features do not exist in PEM.
-Also I like the pure-python aspect of Expenses.
+- Flowchart or pseudocode of main functions.
+- Simple CSV structure explanation.
+- README.md with project overview, usage instructions, and structure.
+- Project report detailing objectives, functionality, design decisions, and testing.
