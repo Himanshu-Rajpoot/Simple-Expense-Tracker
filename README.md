@@ -1,4 +1,4 @@
-Expense Tracker Project
+**#Expense Tracker Project
 Project Title
 
 Simple Expense Tracker
