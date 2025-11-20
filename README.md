@@ -1,5 +1,5 @@
 Expenses
-========
+
 
 Expenses is a tiny expense tracker written in Python. You use it thus:
 
